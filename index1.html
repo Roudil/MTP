@@ -1,0 +1,15 @@
+<html>
+ <head>
+ </head>
+ <body>
+  <script src="https://www.puck-js.com/puck.js"></script>
+  <script>
+      var d = new Date();
+      var n = Math.round(d.getTime()/1000);
+      var puckCommand = "setTime(" + n + ")\\n";
+      console.log(puckCommand);
+  </script>
+  <button onclick="Puck.write(puckCommand);">Set The Time</button>
+  <button onclick="Puck.eval('new Date().toString()',function(x) { console.log(x); })">Get The Time</button>
+   </body>
+</html>
